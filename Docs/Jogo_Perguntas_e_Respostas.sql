@@ -16,8 +16,11 @@ create table tb_Perguntas(
    id int identity primary key,
    pergunta	varchar(max),
    resposta_correta varchar(max),
+   id_jogador int,
    data	datetime default getdate()
    )
+   
+  Alter Table tb_Perguntas Add tb_Jogador Int
    
    select * from tb_Perguntas
    
