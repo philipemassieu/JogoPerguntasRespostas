@@ -50,7 +50,7 @@ namespace JogoDesktop
 
                 comando.Parameters.AddWithValue("@PERGUNTA", lblPergunta.Text);
 
-                comando.Parameters.AddWithValue("@RESPOSTA_CORRETA", lblPergunta.Text);
+                comando.Parameters.AddWithValue("@RESPOSTA_CORRETA", rdbResposta2.Text);
 
                 comando.Parameters.AddWithValue("@TB_JOGADOR", id_jogador_banco);
 
@@ -59,11 +59,37 @@ namespace JogoDesktop
                 comando.ExecuteNonQuery();
 
                 conexao.Close();
+                this.Close();
             }
             else
             {
                 MessageBox.Show("Você errou");
             }
+        }
+
+        private void rdbResposta4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbResposta3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbResposta2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbResposta1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pergunta1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
