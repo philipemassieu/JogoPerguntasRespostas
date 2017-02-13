@@ -34,13 +34,13 @@ namespace JogoDesktop
 
                 //cadastrar no banco de dados a pergunta e a resposta 
 
-                string path = "Server=AME0556344W10-1\\SQLEXPRESS;Database=db_PerguntasERespostas;Trusted_Connection=Yes";
+                string path = "Server=AME0510018W10-1\\SQLEXPRESS;Database=db_PerguntasERespostas;Trusted_Connection=Yes";
                 SqlConnection conexao = new SqlConnection(path);
 
                 SqlCommand comando = new SqlCommand();
                 comando.Connection = conexao;
 
-                string insert = "insert into tb_perguntas(pergunta, resposta_correta, TB_jogador) values (@PERGUNTA, @RESPOSTA_CORRETA, @TB_JOGADOR)";
+                string insert = "insert into tb_perguntas(pergunta, resposta_correta, id_Jogador) values (@PERGUNTA, @RESPOSTA_CORRETA, @ID_JOGADOR)";
 
                 comando.CommandText = insert;
 
@@ -51,7 +51,7 @@ namespace JogoDesktop
 
                 comando.Parameters.AddWithValue("@RESPOSTA_CORRETA", rdbResposta3.Text);
 
-                comando.Parameters.AddWithValue("@TB_JOGADOR", id_jogador_banco);
+                comando.Parameters.AddWithValue("@ID_JOGADOR", id_jogador_banco);
 
 
 
